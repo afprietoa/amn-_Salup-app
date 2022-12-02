@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_doctor_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/icon_service_size"
+        android:layout_height="@dimen/icon_service_size"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginStart="@dimen/big_margin"
+        android:adjustViewBounds="true"
+        tools:srcCompat="@drawable/doc1"
+        android:scaleType="centerInside"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_specialist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="General"
+        android:textColor="@color/primary"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_image"
+        app:layout_constraintTop_toTopOf="@id/item_doctor_image"
+        android:textAppearance="@style/Theme.4BG1.Headline5"
+        android:layout_marginStart="@dimen/default_margin"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        tools:text="Dra.Smith Sara"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_image"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_specialist"
+        android:textAppearance="@style/Theme.4BB4G1.Body1"
+        android:layout_marginStart="@dimen/default_margin"
+        />
+
+    <RatingBar
+        android:id="@+id/item_doctor_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_image"
+        android:numStars="1"
+        android:rating="1"
+        android:isIndicator="true"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_name"
+        android:layout_marginStart="16dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_doctor_sumary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text ="5 estrellas * 330 + Pacientes"
+        app:layout_constraintStart_toEndOf="@id/item_doctor_star"
+        app:layout_constraintTop_toTopOf="@id/item_doctor_star"
+        app:layout_constraintBottom_toBottomOf="@id/item_doctor_star"
+        android:textAppearance="@style/Theme.4BB4G1.Caption"
+
+        />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/item_doctor_image"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

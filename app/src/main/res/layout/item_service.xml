@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_service_icon"
+        app:layout_constraintTop_toTopOf="@id/item_service_title"
+        app:layout_constraintBottom_toBottomOf="@id/item_service_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/icon_service_size"
+        android:layout_height="@dimen/icon_service_size"
+        android:layout_marginVertical="@dimen/small_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        tools:src="@drawable/ico_general"/>
+    
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_service_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_service_icon"
+        android:layout_marginStart="@dimen/default_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/item_service_description"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="General"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:textAppearance="@style/Theme.4BG1.Headline5"
+        android:textColor="@color/primary"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/item_service_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_service_icon"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/item_service_title"
+        android:text="Los mejores especialistas en medicina general."
+        android:textAppearance="@style/Theme.4BB4G1.Body1"
+
+
+        />
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/item_service_separator"
+        app:layout_constraintTop_toBottomOf="@id/item_service_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
